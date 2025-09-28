@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NebriX - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <!-- Star Background -->
+  <canvas id="starfield"></canvas>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="images/logo.jpg" alt="NebriX Logo">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="solution.html">P-S</a></li>
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Dashboard Header -->
+  <header class="dashboard-header">
+    <h1>Satellite Health Dashboard</h1>
+    <p>Real-time Monitoring & AI-Driven Anomaly Detection</p>
+  </header>
+
+  <!-- Metrics Section -->
+  <section class="metrics">
+    <div class="metric-card">
+      <h2>🌡 Temperature</h2>
+      <p id="temp-value">-- °C</p>
+    </div>
+    <div class="metric-card">
+      <h2>🔋 Battery</h2>
+      <p id="battery-value">-- V</p>
+    </div>
+    <div class="metric-card">
+      <h2>☀️ Solar Power</h2>
+      <p id="solar-value">-- W</p>
+    </div>
+    <div class="metric-card">
+      <h2>📡 Communication</h2>
+      <p id="comm-status">Stable</p>
+    </div>
+  </section>
+
+  <section class="orbit-data">
+  <h2>🛰️ Satellite Orbit Data</h2>
+  <div class="data-cards">
+    <div class="card">
+      <h3>Orbit Type</h3>
+      <p>LEO (550 km)</p>
+    </div>
+    <div class="card">
+      <h3>Speed</h3>
+      <p>7.6 km/s</p>
+    </div>
+    <div class="card">
+      <h3>Position</h3>
+      <p>Lat: 12.97° N, Long: 77.59° E</p>
+    </div>
+    <div class="card">
+      <h3>Health Remaining</h3>
+      <p>2 years 134 days</p>
+    </div>
+  </div>
+</section>
+
+<section class="subsystems">
+  <h2>⚙️ Subsystems Status</h2>
+  <ul>
+    <li>📷 Camera: <span class="ok">Operational</span></li>
+    <li>📡 Communication: <span class="ok">Operational</span></li>
+    <li>🔋 Power: <span class="warn">78% Battery</span></li>
+    <li>🛰️ Sensors: <span class="ok">All Active</span></li>
+  </ul>
+</section>
+
+<section class="alerts">
+  <h2>🚨 Collision Alerts</h2>
+  <p>✅ No debris detected nearby</p>
+</section>
+
+
+  <!-- Charts Section -->
+  <section class="charts">
+    <div class="chart-container">
+      <canvas id="tempChart"></canvas>
+    </div>
+    <div class="chart-container">
+      <canvas id="batteryChart"></canvas>
+    </div>
+  </section>
+
+  <!-- Alerts -->
+  <section class="alerts">
+    <h2>⚠️ Anomaly Alerts</h2>
+    <ul id="alert-list">
+      <li>No anomalies detected.</li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
